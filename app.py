@@ -45,16 +45,50 @@ if st.button("Generate Profile 🚀"):
 
         ### 💬 Personalized Message
 
-        Hello **{name}**!  
-        Wishing you great success in your studies at **{college}**.
-
-        Keep learning, keep growing, and keep building your future! 🚀✨
-        """)
-
-        st.balloons()
+        Hello {name}! 🤗 
+        
+        Listen bestie 😉
+        Your GPA is important but your growth matters too.
+        You don't need to have your whole life figured out at {age}.
+        Just keep learning, keep trying, and keep romanticizing your comeback era ✨
+        
+        Wishing you great success in your studies at {college}.
+        rain(
+        emoji="✨",
+        font_size=35,
+        falling_speed=3
+        )
 
     else:
         st.warning("Please fill all details.")
+        import streamlit as st
+
+
+    theme = st.sidebar.selectbox(
+    "Choose Theme",
+    ["Dark Mode 🌙", "Light Mode ☀️"]
+     )
+
+
+    if theme == "Dark Mode 🌙":
+        st.markdown("""
+        <style>
+        .stApp{
+            background: linear-gradient(135deg,#141E30,#243B55);
+            color:white;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+    else:
+        st.markdown("""
+        <style>
+        .stApp{
+            background: linear-gradient(135deg,#f6f9fc,#dbeafe);
+            color:black;
+        }
+        </style>
+        """, unsafe_allow_html=True)
 
 # Footer
 st.markdown("---")
